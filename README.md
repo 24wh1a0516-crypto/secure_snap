@@ -243,16 +243,7 @@ For production deployment, update:
 - `MONGO_URI` to a production MongoDB instance such as MongoDB Atlas
 - `JWT_SECRET` to a strong private secret
 - CORS configuration in the backend
-- Static asset and upload storage strategy
-
-## Author Notes
-
-This repository is suitable for:
-
-- college hackathon submissions
-- portfolio projects
-- full-stack learning projects
-- privacy and digital identity demo systems
+- Static asset and upload storage strategies 
 
 ## License
 
