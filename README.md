@@ -5,18 +5,35 @@ recording consent decisions. The project combines a React frontend with a Node.j
 
 
 # Architecture 
-React UI
-   │
-   │ HTTP Requests (JWT Auth)
-   ▼
-Express API
-   │
-   ├── Auth Controller
-   ├── Upload Controller
-   ├── Warning Controller
-   └── Profile Controller
-   │
-   ▼
++----------------------+
+|      React App       |
+|  (Frontend UI)       |
+|  Login / Upload /    |
+|  Profile / Warnings  |
++----------+-----------+
+           |
+           | HTTP Requests (JWT Auth)
+           v
++----------------------+
+|   Node.js + Express  |
+|      Backend API     |
+|----------------------|
+| Auth Routes          |
+| Upload Routes        |
+| Warning Routes       |
+| Profile Routes       |
++----------+-----------+
+           |
+           | Mongoose
+           v
++----------------------+
+|       MongoDB        |
+|----------------------|
+| users                |
+| profiles             |
+| uploads              |
+| warnings             |
++----------------------+
 MongoDB (Mongoose Models)
 
 ## Overview
