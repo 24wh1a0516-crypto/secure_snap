@@ -1,6 +1,23 @@
 # Secure Snap
 
-Secure Snap is a full-stack web application for protecting a user's digital identity by managing face image uploads, tracking potential misuse alerts, and recording consent decisions. The project combines a React frontend with a Node.js/Express backend and MongoDB for persistent storage.
+Secure Snap is a full-stack web application for protecting a user's digital identity by managing face image uploads, tracking potential misuse alerts, and 
+recording consent decisions. The project combines a React frontend with a Node.js/Express backend and MongoDB for persistent storage.
+
+
+# Architecture 
+React UI
+   │
+   │ HTTP Requests (JWT Auth)
+   ▼
+Express API
+   │
+   ├── Auth Controller
+   ├── Upload Controller
+   ├── Warning Controller
+   └── Profile Controller
+   │
+   ▼
+MongoDB (Mongoose Models)
 
 ## Overview
 
@@ -12,7 +29,7 @@ The application is designed around a privacy-first workflow:
 - Detection alerts can be reviewed and marked as approved or denied.
 - Profile preferences such as sensitivity, connected accounts, and subscription details can be updated.
 
-## Features
+## Features 
 
 - User signup and login with hashed passwords using `bcryptjs`
 - JWT-based authentication
